@@ -1,0 +1,23 @@
+<button class="btn btn-primary" (click)="cargar()"><span class="fa fa-refresh"></span></button>
+
+
+
+<table class="table">
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Acciones</th>
+  </tr>
+
+  <tr *ngFor="let book of mydata">
+    <td>{{book.id}}</td>
+    <td>{{book.title}}</td>
+    <td><button (click)="eliminar(book.id)" class="btn btn-danger btn-sm" ><span class="fa fa-trash"></span></button></td>
+  </tr>
+</table>
+<hr>
+
+  <input type="text" name="title" id="" [(ngModel)]="libro.titulo">
+  <input type="number" name="pages" id="" [(ngModel)]="libro.pagina">
+  <button (click)="ingresar()"></button>
+
